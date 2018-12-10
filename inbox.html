@@ -1,0 +1,48 @@
+<div id="inbox" style="display:none">
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary" id="refreshBtn">Refresh Inbox</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sendMsgModal">Compose Message</button>
+      </div>
+      <div class="col-md-6">
+      <nav>
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" id="pageBackward" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" id="currentPage">1</a></li>
+          <li class="page-item">
+            <a class="page-link" id="pageForward" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-1" style="text-align:right">
+      <button type="button" class="btn btn-danger" id="logoutBtn">Logout</button>
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-10">
+    <table class="table" id="msgTable">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Timestamp</th>
+          <th scope="col">From</th>
+          <th scope="col">Message</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
