@@ -3,6 +3,9 @@ CryptoPP, with PEM pack: https://github.com/weidai11/cryptopp, https://www.crypt
 CSPRNG: https://github.com/Duthomhas/CSPRNG
 libbcrypt: https://github.com/trusch/libbcrypt
 SQLite3: sudo apt-get install sqlite3 libsqlite3-dev
+         https://www.sqlite.org/cintro.html
+libuuid: should already be installed, if not sudo apt-get install e2fsprogs
+         https://linux.die.net/man/3/libuuid
 
 You can compile the individual CPP files with these commands:
 
