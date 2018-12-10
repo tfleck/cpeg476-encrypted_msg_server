@@ -25,3 +25,10 @@ the private key needs to go in the cgi-bin folder with the executables,
 and the public key should go in the server root folder with the html files
 
 Navigate to the server's address in a browser, and you should see the login/signup page
+
+------------------------------------------------------------------------------------------
+
+There is also a command line version, test.cpp
+g++ test.cpp csprng.cpp -I . --std=c++11 -Wall -Wextra -lbcrypt -lsqlite3 -luuid -lcrypto -lcryptopp -o test
+
+Due to difficulty with handling PEM key formatting from the command line, keys are handled using hex encoding
