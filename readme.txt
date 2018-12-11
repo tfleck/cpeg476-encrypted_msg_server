@@ -32,3 +32,17 @@ There is also a command line version, test.cpp
 g++ test.cpp csprng.cpp -I . --std=c++11 -Wall -Wextra -lbcrypt -lsqlite3 -luuid -lcrypto -lcryptopp -o test
 
 Due to difficulty with handling PEM key formatting from the command line, keys are handled using hex encoding
+
+------------------------------------------------------------------------------------------
+Future Improvements
+- A rewrite of the structure of a lot of the code would vastly improve readability & maintainability,
+    I neglected to do this last step of my development workflow due to time constraints, and this not
+    being a long-term project
+- Use something other than bcrypt for password hashing so it can be done in the browser as well, this 
+    would allow for more secure password authentication schemes
+- A better system for session management than a random number token, or having to do user & pass auth
+    for every database operation
+- Better Apache security, I probably missed things in setting up Apache properly & securely
+- Realistically, the best way to do this, would be to hook up the JS frontend to a firebase-style backend,
+    and use their auth, session management, and database, while still using RSA in the browser to ensure
+    messages can only be read by the user they were sent to
