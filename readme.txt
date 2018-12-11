@@ -34,7 +34,7 @@ g++ test.cpp csprng.cpp -I . --std=c++11 -Wall -Wextra -lbcrypt -lsqlite3 -luuid
 Due to difficulty with handling PEM key formatting from the command line, keys are handled using hex encoding
 
 ------------------------------------------------------------------------------------------
-Future Improvements
+Future Improvements/Known Issues
 - A rewrite of the structure of a lot of the code would vastly improve readability & maintainability,
     I neglected to do this last step of my development workflow due to time constraints, and this not
     being a long-term project
@@ -42,6 +42,8 @@ Future Improvements
     would allow for more secure password authentication schemes
 - A better system for session management than a random number token, or having to do user & pass auth
     for every database operation
+- Communication back and forth between browser isn't ideal with the preset buffers
+- There could be more form validation to prevent invalid/malicious inputs
 - Better Apache security, I probably missed things in setting up Apache properly & securely
 - Realistically, the best way to do this, would be to hook up the JS frontend to a firebase-style backend,
     and use their auth, session management, and database, while still using RSA in the browser to ensure
